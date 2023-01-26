@@ -70,4 +70,53 @@ public class Dao implements IDao{
 		return li;
 	}
 
+	@Override
+	public void update(Employee e) {
+		Connection conn = DBConnection.getConnection();
+	
+		try {
+			PreparedStatement ps = conn.prepareStatement("update employee set salary = ? where id = ?");
+
+			ps.setFloat(1, e.getSalary()+40000);
+			ps.setInt(2,  e.getId());
+			
+			int x = ps.executeUpdate();
+			
+			if (x!=0) {
+				System.out.println("data updated");
+			} else {
+				System.out.println("issue with query");
+			}
+			
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public void delete(Employee e) {
+		Connection conn = DBConnection.getConnection();
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement("delete from employee where id = ?");
+
+			ps.setInt(1, e.getId());
+			
+			int x = ps.executeUpdate();
+			
+			if (x!=0) {
+				System.out.println("data deleted");
+			} else {
+				System.out.println("issue with query");
+			}
+			
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+	}
+
 }

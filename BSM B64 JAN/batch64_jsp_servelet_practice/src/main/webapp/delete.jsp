@@ -9,14 +9,15 @@
 <body>
 
 
-<form action = "Update" method = "post">
+<form action = "deleteServlet" method = "post">
 	ID<input type="text" name="id"/><br/>
 	Name<input type="text" name="ename"/><br/>
 	Dept<input type="text" name="edept"/><br/>
 	Salary<input type="text" name="esalary"/><br/>
 	<br/>
 	
-	<input type="submit" value = "Register"/><br/>
+	<input type="submit" value = "Delete"/><br/>
 </form>
+
 </body>
 </html>

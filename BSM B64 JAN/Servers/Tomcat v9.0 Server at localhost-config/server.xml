@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="B64 Cogent" path="/B64_Cogent" reloadable="true" source="org.eclipse.jst.jee.server:B64 Cogent"/><Context docBase="batch64dynamic" path="/batch64dynamic" reloadable="true" source="org.eclipse.jst.jee.server:batch64dynamic"/><Context docBase="batch64_jsp_servelet_practice" path="/batch64_jsp_servelet_practice" reloadable="true" source="org.eclipse.jst.jee.server:batch64_jsp_servelet_practice"/></Host>
+      <Context docBase="B64 Cogent" path="/B64_Cogent" reloadable="true" source="org.eclipse.jst.jee.server:B64 Cogent"/><Context docBase="batch64dynamic" path="/batch64dynamic" reloadable="true" source="org.eclipse.jst.jee.server:batch64dynamic"/><Context docBase="batch64_jsp_servelet_practice" path="/batch64_jsp_servelet_practice" reloadable="true" source="org.eclipse.jst.jee.server:batch64_jsp_servelet_practice"/><Context docBase="JSP_Basics" path="/JSP_Basics" reloadable="true" source="org.eclipse.jst.jee.server:JSP_Basics"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -7,18 +7,32 @@ import DAO.IDao;
 import model.Employee;
 
 public class Service implements IService {
+	IDao dao = new Dao();
 
 	@Override
 	public void insert(Employee e) {
-		IDao dao = new Dao();
+		
 		dao.insert(e);
 		
 	}
 
 	@Override
 	public List<Employee> fetchAll() {
-		IDao dao = new Dao();
+		
 		return dao.fetchAll();
+	}
+
+	@Override
+	public void update(Employee e) {
+		
+		dao.update(e);
+		
+	}
+
+	@Override
+	public void delete(Employee e) {
+		dao.delete(e);
+		
 	}
 	
 	
