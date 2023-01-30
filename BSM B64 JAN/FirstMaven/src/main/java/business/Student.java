@@ -1,6 +1,9 @@
 package business;
 
 public class Student {
+
+
+
 	private String name;
 	private int age;
 	private String email;
@@ -12,6 +15,8 @@ public class Student {
 	
 	public Student(String name, int age, String email) {
 		super();
+		System.out.println("parameterized constructor");
+		
 		this.name = name;
 		this.age = age;
 		this.email = email;
@@ -47,5 +52,8 @@ public class Student {
 		this.email = email;
 	}
 
-
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", age=" + age + ", email=" + email + "]";
+	}
 }

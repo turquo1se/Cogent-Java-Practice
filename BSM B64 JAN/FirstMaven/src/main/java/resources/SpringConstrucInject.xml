@@ -1,0 +1,12 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="obj" class="business.Student">  <!--constructor injection  -->
+		<constructor-arg value="allen"/>
+		<constructor-arg value="123"/> <!--can also include index="1" or "2" or etc. to define index -->
+			                                    
+		<constructor-arg value="allen@gmail.com"/>
+
+	</bean>
+		
+</beans>
