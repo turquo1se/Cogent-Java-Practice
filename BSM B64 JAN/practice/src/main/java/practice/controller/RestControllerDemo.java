@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import practice.model.Student;
+
 
 
 @RestController
@@ -26,6 +28,11 @@ public class RestControllerDemo {
 	@GetMapping("/find") 
 	public String fetchData() {
 		return "Welcome to Tech";
+	}
+	
+	@GetMapping("/create") 
+	public String createStudent(@RequestBody Student s) {
+		return s.toString();
 	}
 	
 	
